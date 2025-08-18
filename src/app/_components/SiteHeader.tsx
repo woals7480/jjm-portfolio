@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import * as s from "./SiteHeader.css";
 
@@ -17,8 +17,6 @@ export type SiteHeaderProps = {
   logoHref?: string;
   navItems?: NavItem[];
   cta?: { label: string; href: string; external?: boolean };
-  sticky?: boolean;
-  className?: string;
 };
 
 export default function SiteHeader({
@@ -26,15 +24,19 @@ export default function SiteHeader({
   logoHref = "/",
   navItems = [],
   cta,
-  sticky: isSticky = true,
-  className = "",
 }: SiteHeaderProps) {
   const pathname = usePathname() || "/";
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (open) {
+      console.log("open", open);
+    }
+  }, [open]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -42,7 +44,7 @@ export default function SiteHeader({
   };
 
   return (
-    <header className={clsx(s.siteHeader, isSticky && s.sticky, className)}>
+    <header className={s.siteHeader}>
       <a href="#content" className={s.skipLink}>
         Skip to content
       </a>

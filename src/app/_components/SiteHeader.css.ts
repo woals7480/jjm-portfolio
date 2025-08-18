@@ -23,7 +23,9 @@ export const vars = {
 };
 
 export const siteHeader = style({
-  position: "relative",
+  position: "fixed",
+  top: 0,
+  width: "100dvw",
   zIndex: 50,
   color: vars.fg,
   background: vars.bg,
@@ -38,8 +40,6 @@ export const siteHeader = style({
     },
   },
 });
-
-export const sticky = style({ position: "sticky", top: 0 });
 
 export const inner = style({
   height: headerH,

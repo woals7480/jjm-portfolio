@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head />
-      <body>
+      <body style={{ height: "200vh" }}>
         <SiteHeader cta={cta} navItems={navItems} />
         {children}
       </body>
