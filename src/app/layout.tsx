@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./global.css.ts";
 import SiteHeader from "@/app/_components/SiteHeader";
-import { cookies } from "next/headers.js";
-import { isTheme, Theme, THEME_COOKIE } from "@/lib/theme";
+import { cookies } from "next/headers";
+import { isTheme, Theme, THEME_COOKIE } from "@/_lib/theme";
 import * as s from "./layout.css";
+import { pretendard } from "@/_lib/font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +24,11 @@ export default async function RootLayout({
     { label: "Home", href: "/", external: false },
     { label: "Resume", href: "/resume", external: false },
     { label: "Portfolio", href: "/portfolio", external: false },
-    { label: "Github", href: "/github", external: true },
+    { label: "Github", href: "https://github.com/woals7480", external: true },
   ];
 
   return (
-    <html lang="ko" data-theme={theme}>
+    <html lang="ko" data-theme={theme} className={pretendard.variable}>
       <head />
       <body className={s.RootBody}>
         <SiteHeader navItems={navItems} />

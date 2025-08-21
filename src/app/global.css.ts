@@ -21,6 +21,9 @@ globalStyle(":root", {
 
 // html, body 전역 규칙
 globalStyle("html, body", {
+  fontFamily: 'var(--font-pretendard), "Malgun Gothic", sans-serif',
+  lineHeight: 1.55,
+  letterSpacing: "0.005em",
   maxWidth: "100vw",
   overflowX: "hidden",
 });
@@ -29,7 +32,6 @@ globalStyle("html, body", {
 globalStyle("body", {
   color: vars.foreground,
   background: vars.background,
-  fontFamily: "Arial, Helvetica, sans-serif",
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
 });

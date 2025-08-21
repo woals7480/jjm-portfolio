@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import * as s from "./SiteHeader.css";
-import type { Theme } from "@/lib/theme";
+import type { Theme } from "@/_lib/theme";
 
 export type NavItem = { label: string; href: string; external?: boolean };
 export type SiteHeaderProps = {
@@ -25,7 +25,7 @@ export default function SiteHeader({
   const pathname = usePathname() || "/";
   const router = useRouter();
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
   // ★ 초기값을 SSR과 동일하게 맞춤 → 하이드레이션 안전
   const [theme, setTheme] = useState<Theme>(initialTheme);
 

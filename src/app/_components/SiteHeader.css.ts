@@ -19,7 +19,7 @@ export const vars = {
 };
 
 export const siteHeader = style({
-  position: "sticky",
+  position: "fixed",
   top: 0,
   width: "100%",
   zIndex: 50,
