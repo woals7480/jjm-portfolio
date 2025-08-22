@@ -7,7 +7,6 @@ export type ResumeData = {
   };
   introduce: string[];
   career: { role: string; org?: string; period?: string; bullets?: string[] }[];
-  devExperience: string[];
   projects: {
     title: string;
     subtitle?: string;

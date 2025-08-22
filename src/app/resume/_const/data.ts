@@ -33,12 +33,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
   ],
-  devExperience: [
-    "Next.js App Router 전환 및 캐시/스트리밍 패턴 적용",
-    "LCP/CLS 중심 성능 개선(코드 스플리팅, prefetch, 이미지 최적화)",
-    "Jest/RTL + Playwright로 핵심 경로 테스트 자동화",
-    "Vercel/GitHub Actions 기반 CI/CD 및 프리뷰 배포",
-  ],
+
   projects: [
     {
       title: "채들 관리자 페이지",
@@ -152,6 +147,20 @@ export const RESUME_DATA: ResumeData = {
     "GraphQL",
   ],
   education: [
-    { school: "창원대학교", major: "의류학과", period: "2013 – 2020" },
+    {
+      school: "[인프런x코드캠프] 부트캠프에서 만든 고농축 프론트엔드 코스 수료",
+      major: "Next.js, TypeScript, Graphql 기반의 코스",
+      period: "2023.01 ~ 2023.05",
+    },
+    {
+      school: "노마드코더 코코아클론 코스 수료",
+      major: "HTML, CSS 기반의 코스",
+      period: "2021.11 ~ 2021.11",
+    },
+    {
+      school: "디지털시각디자인 수료",
+      major: "포토샵, 일러스트, HTML, CSS 기반의 웹디자인 국비교육",
+      period: "2021.01 ~ 2021.07",
+    },
   ],
 };

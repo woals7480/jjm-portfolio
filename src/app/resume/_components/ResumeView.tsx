@@ -5,16 +5,8 @@ import * as s from "./ResumeView.css";
 import type { ResumeData } from "@/app/resume/_types";
 
 export default function ResumeView({ data }: { data: ResumeData }) {
-  const {
-    profile,
-    contact,
-    introduce,
-    career,
-    devExperience,
-    projects,
-    skills,
-    education,
-  } = data;
+  const { profile, contact, introduce, career, projects, skills, education } =
+    data;
 
   function LinkIcon() {
     return (
@@ -118,16 +110,6 @@ export default function ResumeView({ data }: { data: ResumeData }) {
             </article>
           ))}
         </div>
-      </section>
-
-      {/* Dev Experience */}
-      <section className={s.card}>
-        <h2 className={s.h2}>Dev Experience</h2>
-        <ul className={s.list}>
-          {devExperience.map((b, i) => (
-            <li key={i}>{b}</li>
-          ))}
-        </ul>
       </section>
 
       {/* Projects */}
