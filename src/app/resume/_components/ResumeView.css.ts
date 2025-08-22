@@ -171,17 +171,17 @@ const badgeBase = {
 
 export const badgeCompany = style({
   ...badgeBase,
-  background: "rgba(37,99,235,.10)", // blue tint
+  background: "rgba(37,99,235,0.6)", // blue tint
   borderColor: c.border,
 });
 export const badgePersonal = style({
   ...badgeBase,
-  background: "rgba(16,185,129,.12)", // emerald tint
+  background: "rgba(16,185,129,0.6)", // emerald tint
   borderColor: c.border,
 });
 export const badgeFreelance = style({
   ...badgeBase,
-  background: "rgba(139,92,246,.12)", // violet tint
+  background: "rgba(139,92,246,0.6)", // violet tint
   borderColor: c.border,
 });
 
