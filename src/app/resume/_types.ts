@@ -18,4 +18,9 @@ export type ResumeData = {
   }[];
   skills: string[];
   education: { school: string; major?: string; period?: string }[];
+  certification: {
+    name: string;
+    issuer?: string;
+    issueDate?: string;
+  }[];
 };

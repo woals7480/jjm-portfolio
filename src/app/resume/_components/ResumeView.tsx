@@ -5,8 +5,16 @@ import * as s from "./ResumeView.css";
 import type { ResumeData } from "@/app/resume/_types";
 
 export default function ResumeView({ data }: { data: ResumeData }) {
-  const { profile, contact, introduce, career, projects, skills, education } =
-    data;
+  const {
+    profile,
+    contact,
+    introduce,
+    career,
+    projects,
+    skills,
+    education,
+    certification,
+  } = data;
 
   function LinkIcon() {
     return (
@@ -196,6 +204,21 @@ export default function ResumeView({ data }: { data: ResumeData }) {
                 {e.major && <p className={s.eduMajor}>{e.major}</p>}
               </div>
               {e.period && <span className={s.period}>{e.period}</span>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={s.card}>
+        <h2 className={s.h2}>Certification</h2>
+        <div className={s.stack}>
+          {certification.map((c, i) => (
+            <div key={i} className={s.edu}>
+              <div>
+                <p className={s.eduSchool}>{c.name}</p>
+                {c.issuer && <p className={s.eduMajor}>{c.issuer}</p>}
+              </div>
+              {c.issueDate && <span className={s.period}>{c.issueDate}</span>}
             </div>
           ))}
         </div>

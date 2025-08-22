@@ -33,7 +33,6 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
   ],
-
   projects: [
     {
       title: "채들 관리자 페이지",
@@ -161,6 +160,23 @@ export const RESUME_DATA: ResumeData = {
       school: "디지털시각디자인 수료",
       major: "포토샵, 일러스트, HTML, CSS 기반의 웹디자인 국비교육",
       period: "2021.01 ~ 2021.07",
+    },
+  ],
+  certification: [
+    {
+      name: "컴퓨터그래픽스운용기능사",
+      issuer: "한국산업인력공단",
+      issueDate: "2021.06",
+    },
+    {
+      name: "그래픽기술자격(GTQ) 1급",
+      issuer: "한국생산성본부(KPC)",
+      issueDate: "2020.12",
+    },
+    {
+      name: "컴퓨터활용능력1급",
+      issuer: "대한상공회의소",
+      issueDate: "2020.06",
     },
   ],
 };

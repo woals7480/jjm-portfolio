@@ -212,7 +212,7 @@ export const edu = style({
 });
 globalStyle(`[data-theme="dark"] ${edu}`, { borderColor: c.borderDark });
 export const eduSchool = style({ fontWeight: 800 });
-export const eduMajor = style({ color: c.fgMuted });
+export const eduMajor = style({ color: c.fgMuted, fontSize: ".8rem" });
 globalStyle(`[data-theme="dark"] ${eduMajor}`, { color: c.fgMutedDark });
 
 export const bottom = style({
