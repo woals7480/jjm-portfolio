@@ -41,6 +41,8 @@ globalStyle("*", { boxSizing: "border-box", padding: 0, margin: 0 });
 
 globalStyle("a", { color: "inherit", textDecoration: "none" });
 
+globalStyle("ul", { listStyle: "none" });
+
 // 다크 모드 color-scheme
 globalStyle("html", {
   "@media": {
