@@ -1,12 +1,8 @@
-export type ResumeData = {
-  profile: { name: string; title: string; subtitle?: string; photoUrl: string };
-  contact: {
-    email: string;
-    phone: string;
-    github?: { href: string; label?: string };
-  };
+import { ProfileCardProps, CareerCardProps } from "@/app/_types";
+
+export type ResumeData = ProfileCardProps & {
   introduce: string[];
-  career: { role: string; org?: string; period?: string; bullets?: string[] }[];
+  career: CareerCardProps;
   projects: {
     title: string;
     subtitle?: string;

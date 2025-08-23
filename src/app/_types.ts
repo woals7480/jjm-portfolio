@@ -22,3 +22,19 @@ export type ProfileIntroProps = {
   };
   footerNote?: string;
 };
+
+export type ProfileCardProps = {
+  profile: { name: string; title: string; subtitle?: string; photoUrl: string };
+  contact: {
+    email: string;
+    phone: string;
+    github?: { href: string; label?: string };
+  };
+};
+
+export type CareerCardProps = {
+  role: string;
+  org?: string;
+  period?: string;
+  bullets?: string[];
+}[];

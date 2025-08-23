@@ -1,8 +1,7 @@
-// app/resume/ResumeView.tsx
-import Image from "next/image";
-import Link from "next/link";
 import * as s from "./ResumeView.css";
 import type { ResumeData } from "@/app/resume/_types";
+import ProfileCard from "@/app/_components/ProfileCard";
+import CareerCard from "@/app/_components/CareerCard";
 
 export default function ResumeView({ data }: { data: ResumeData }) {
   const {
@@ -34,58 +33,7 @@ export default function ResumeView({ data }: { data: ResumeData }) {
   return (
     <main className={s.page}>
       {/* 프로필 카드 */}
-      <section className={s.card}>
-        <div className={s.hero}>
-          <Image
-            src={profile.photoUrl}
-            alt={`${profile.name} 프로필`}
-            width={96}
-            height={96}
-            className={s.avatar}
-            priority
-          />
-          <div>
-            <h1 className={s.title}>
-              {profile.name} <span>| Resume</span>
-            </h1>
-            <p className={s.role}>{profile.title}</p>
-            {profile.subtitle && (
-              <p className={s.subtitle}>{profile.subtitle}</p>
-            )}
-          </div>
-        </div>
-
-        <ul className={s.kv}>
-          <li>
-            <span className={s.k}>Email</span>
-            <Link href={`mailto:${contact.email}`} className={s.a}>
-              {contact.email}
-            </Link>
-          </li>
-          <li>
-            <span className={s.k}>Phone</span>
-            <a
-              href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
-              className={s.a}
-            >
-              {contact.phone}
-            </a>
-          </li>
-          {contact.github && (
-            <li>
-              <span className={s.k}>Github</span>
-              <Link
-                href={contact.github.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={s.a}
-              >
-                {contact.github.label ?? contact.github.href}
-              </Link>
-            </li>
-          )}
-        </ul>
-      </section>
+      <ProfileCard profile={profile} contact={contact} />
 
       {/* Introduce */}
       <section className={s.card}>
@@ -98,27 +46,7 @@ export default function ResumeView({ data }: { data: ResumeData }) {
       </section>
 
       {/* Career */}
-      <section className={s.card}>
-        <h2 className={s.h2}>Career</h2>
-        <div className={s.stack}>
-          {career.map((c, i) => (
-            <article key={i} className={s.item}>
-              <header className={s.itemHeader}>
-                <h3 className={s.itemTitle}>{c.role}</h3>
-                {c.period && <span className={s.period}>{c.period}</span>}
-              </header>
-              {c.org && <p className={s.org}>{c.org}</p>}
-              {c.bullets && (
-                <ul className={s.list}>
-                  {c.bullets.map((b, idx) => (
-                    <li key={idx}>{b}</li>
-                  ))}
-                </ul>
-              )}
-            </article>
-          ))}
-        </div>
-      </section>
+      <CareerCard career={career} />
 
       {/* Projects */}
       <section className={s.card}>
