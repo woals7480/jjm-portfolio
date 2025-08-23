@@ -24,7 +24,13 @@ export type ProfileIntroProps = {
 };
 
 export type ProfileCardProps = {
-  profile: { name: string; title: string; subtitle?: string; photoUrl: string };
+  profile: {
+    name: string;
+    title: string;
+    subtitle?: string;
+    photoUrl: string;
+    page?: "Resume" | "Portfolio";
+  };
   contact: {
     email: string;
     phone: string;

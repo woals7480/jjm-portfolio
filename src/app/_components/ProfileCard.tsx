@@ -17,7 +17,7 @@ export default function ProfileCard({ profile, contact }: ProfileCardProps) {
         />
         <div>
           <h1 className={s.title}>
-            {profile.name} <span>| Resume</span>
+            {profile.name} <span>| {profile.page}</span>
           </h1>
           <p className={s.role}>{profile.title}</p>
           {profile.subtitle && <p className={s.subtitle}>{profile.subtitle}</p>}

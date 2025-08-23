@@ -6,6 +6,7 @@ export const RESUME_DATA: ResumeData = {
     title: "프론트엔드 개발자",
     subtitle: "접근성과 성능을 기본으로, 누구나 쓰기 쉬운 웹을 만듭니다.",
     photoUrl: "/profile.png",
+    page: "Resume",
   },
   contact: {
     email: "woals7480@gmail.com",
@@ -64,7 +65,7 @@ export const RESUME_DATA: ResumeData = {
       subtitle:
         "하자(AS) 접수·조회, 사전점검/입주이사 예약, 처리 진행상태 확인·서명 등을 하는 입주민 앱",
       type: "company",
-      meta: "2024.08 ~ 2025.03",
+      meta: "2023.08 ~ 2024.03",
       bullets: [
         "- React Native 기반 입주민앱 주요 기능(하자접수, 예약 일정 관리, 푸시알림) 구현",
         "- Redux를 활용한 전역 상태관리 및 데이터 흐름 개선",
@@ -133,6 +134,7 @@ export const RESUME_DATA: ResumeData = {
     "React",
     "Next.js",
     "Vue3",
+    "React Native",
     "TypeScript",
     "React Query",
     "Vuex",
