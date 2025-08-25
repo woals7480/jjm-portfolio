@@ -5,11 +5,22 @@ import Link from "next/link";
 import clsx from "clsx";
 import * as s from "./ProjectsCard.css";
 import { ProjectProps } from "../_types";
+import { useRouter } from "next/navigation";
+import { MouseEventHandler } from "react";
 
 const fmt = (p?: ProjectProps["period"]) =>
   p ? `${p.start} – ${p.end ?? "현재"}` : undefined;
 
 export default function Projects({ projects }: { projects: ProjectProps[] }) {
+  const router = useRouter();
+
+  const onClickCard =
+    (projectId: string): MouseEventHandler<HTMLElement> =>
+    (e) => {
+      e.preventDefault();
+      router.push(`/portfolio/projects/${encodeURIComponent(projectId)}`);
+    };
+
   return (
     <section className={clsx(s.section, s.cardWrap)} aria-label={"Projects"}>
       <header className={s.header}>
@@ -21,7 +32,11 @@ export default function Projects({ projects }: { projects: ProjectProps[] }) {
 
       <div className={s.grid}>
         {projects.map((prj) => (
-          <article key={prj.id} className={s.card}>
+          <article
+            key={prj.id}
+            className={s.card}
+            onClick={onClickCard(prj.id)}
+          >
             <div className={s.cover}>
               <Image
                 src={prj.cover}
