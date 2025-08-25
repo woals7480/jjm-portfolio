@@ -1,7 +1,14 @@
-export default function ProjectModal({
-  params: { id },
+import ProjectModal from "@/app/portfolio/_components/ProjectModal";
+
+export default async function ProjectModalPage({
+  params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  return <div>{id}</div>;
+  const { id } = await params;
+  return (
+    <>
+      <ProjectModal />
+    </>
+  );
 }

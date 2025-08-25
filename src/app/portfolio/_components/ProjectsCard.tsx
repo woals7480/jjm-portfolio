@@ -18,7 +18,9 @@ export default function Projects({ projects }: { projects: ProjectProps[] }) {
     (projectId: string): MouseEventHandler<HTMLElement> =>
     (e) => {
       e.preventDefault();
-      router.push(`/portfolio/projects/${encodeURIComponent(projectId)}`);
+      router.push(`/portfolio/projects/${encodeURIComponent(projectId)}`, {
+        scroll: false,
+      });
     };
 
   return (

@@ -1,4 +1,4 @@
-import { PortfolioData } from "@/app/portfolio/_types";
+import { PortfolioData, ProjectDetailProps } from "@/app/portfolio/_types";
 
 export const PORTFOLIO_DATA: PortfolioData = {
   profile: {
@@ -69,7 +69,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
   projects: [
     {
-      id: "chaedle admin",
+      id: "chaedle-admin",
       title: "채들 어드민",
       cover: "/chaedle_admin3.jpg",
       period: { start: "2025/01", end: "2025/05" },
@@ -113,7 +113,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: "market",
-      title: "딸키마켓",
+      title: "딸기마켓",
       cover: "/market.png",
       tags: [
         "Next.js",
@@ -130,3 +130,123 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
   ],
 };
+
+export const PROJECTS_DATA: ProjectDetailProps[] = [
+  {
+    id: "chaedle-admin",
+    title: "채들 관리자페이지",
+    period: { start: "2025.01", end: "2025.05" },
+    images: [
+      { src: "/chaedle_admin3.jpg", alt: "채들 어드민" },
+      { src: "/chaedle_admin2.jpg", alt: "채들 어드민2" },
+    ],
+    callout:
+      "입주민 앱에서 들어온 하자·예약 데이터를 실시간으로 확인하고 피드백/처리 현황을 관리하는 통합 관리자페이지입니다.",
+    links: [],
+    stacks: [
+      "Vue3",
+      "TypeScript",
+      "Vuex",
+      "Vuetify",
+      "Socket.IO",
+      "pdfmake",
+      "Chart.js",
+      "xlsx",
+    ],
+    features: [
+      "- Vue3 및 Vuetify3 기반 관리자페이지 UI/UX 설계 및 구현",
+      "- 재사용 가능한 공통 컴포넌트 개발 및 유지보수",
+      "- Vuex를 통한 전역 상태관리 및 API 연동",
+      "- 하자접수, 예약관리 기능 구현",
+      "- pdfMake, xlsx.js를 활용한 문서 출력 및 엑셀 다운로드 기능 구현",
+      "- Chart.js를 이용한 관리자 대시보드 주요 지표 시각화",
+      "- Socket.IO 기반 실시간 예약관리 기능 구축",
+    ],
+    type: "company",
+    members: { frontend: 2, backend: 1 },
+  },
+  {
+    id: "chaedle",
+    title: "채들",
+    period: { start: "2023.08", end: "2024.03" },
+    images: [{ src: "/chaedle.jpg", alt: "채들 어드민" }],
+    callout:
+      "하자(AS) 접수·조회, 사전점검/입주이사 예약, 처리 진행상태 확인·서명 등을 하는 입주민 앱입니다.",
+    links: [],
+    stacks: ["React Native", "TypeScript", "Redux", "Socket.IO", "SQLite"],
+    features: [
+      "- React Native 기반 입주민앱 주요 기능(하자접수, 예약 일정 관리, 푸시알림) 구현",
+      "- Redux를 활용한 전역 상태관리 및 데이터 흐름 개선",
+      "- SQLite 기반 오프라인 모드 지원으로 네트워크 불안정 상황에서도 주요 기능 사용 가능",
+      "- Socket.IO 기반 예약 실시간 동기화 및 알림 기능 구현",
+    ],
+    type: "company",
+    members: { frontend: 3, backend: 1 },
+  },
+  {
+    id: "zcom",
+    title: "Zcom",
+    images: [{ src: "/zcom.png", alt: "Zcom" }],
+    callout:
+      "z.com은 Next.js와 Typescript를 기반으로 X.com 클론코딩 사이트입니다.",
+    links: [
+      { label: "GitHub", href: "https://github.com/woals7480/zcom-next" },
+    ],
+    stacks: [
+      "Next.js",
+      "TypeScript",
+      "React Query",
+      "Next Auth",
+      "Socket.IO",
+      "MSW",
+      "Zustand",
+    ],
+    features: [
+      "- 사용자 회원가입/로그인/로그아웃 (Next Auth + Credentials)",
+      "- 게시글 작성/수정/삭제",
+      "- 게시글 좋아요, 댓글 기능",
+      "- 무한 스크롤 및 인피니트 페이징 (React Query)",
+      "- 옵티미스틱 업데이트 및 롤백 처리",
+      "- 실시간 채팅 (Socket.IO + React Query)",
+      "- MSW를 이용한 개발용 Mock API → 실제 API 손쉬운 전환",
+      "- 상태 관리 (Zustand)",
+      "- SSR로 SEO 최적화",
+    ],
+    type: "personal",
+    members: { frontend: 1 },
+  },
+  {
+    id: "market",
+    title: "딸기마켓",
+    images: [{ src: "/market.png", alt: "market" }],
+    callout:
+      "딸기마켓은 Next.js와 Graphql을 기반으로 한 중고물품거래사이트입니다.",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/woals7480/freeboard_frontend",
+      },
+    ],
+    stacks: [
+      "Next.js",
+      "TypeScript",
+      "Recoil",
+      "GraphQL",
+      "Apollo GraphQL",
+      "Emotion",
+    ],
+    features: [
+      "- 사용자 회원가입/로그인/로그아웃",
+      "- 상품 게시글 작성/수정/삭제",
+      "- 상품 게시글 좋아요, 댓글 기능",
+      "- 검색기능 최적화 (Lodash)",
+      "- 무한스크롤(react-infinite-scroller)",
+      "- 결제기능(PortOne)",
+      "- 상태 관리 (Recoil)",
+      "- 지도 연동(kakao map)",
+      "- 웹 에디터(react-quill)",
+    ],
+    type: "personal",
+    members: { frontend: 1 },
+  },
+];

@@ -102,8 +102,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "딸기마켓",
-      subtitle:
-        "딸기마켓은 Next.js와 Graphql을 기반으로 한 중고물품거래사이트입니다",
+      subtitle: "딸기마켓은 Next.js와 Graphql을 기반으로 한 중고물품거래사이트",
       type: "personal",
       bullets: [
         "- 사용자 회원가입/로그인/로그아웃",

@@ -5,7 +5,6 @@ export default function ProjectsPage() {
   return (
     <>
       <PortfolioView data={PORTFOLIO_DATA} />
-      <>가로채기</>
     </>
   );
 }

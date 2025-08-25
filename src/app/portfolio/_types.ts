@@ -23,3 +23,17 @@ export type PortfolioData = ProfileCardProps & {
   skills: SkillProps[];
   projects: ProjectProps[];
 };
+
+export type ProjectDetailProps = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  period?: { start: string; end?: string };
+  images?: { src: string; alt?: string }[];
+  callout?: string;
+  links?: { label: string; href: string }[];
+  stacks?: string[];
+  features?: string[];
+  type?: "company" | "personal" | "freelance";
+  members?: { frontend?: number; backend?: number };
+};
