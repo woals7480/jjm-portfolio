@@ -36,6 +36,38 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
+      title: "RunJam",
+      subtitle:
+        "달리기 기록, 신발 마일리지, 주간/월간 통계를 한곳에서 관리하는 개인 러닝 트래커 페이지",
+      type: "personal",
+      meta: "2025.09 ~ 진행중",
+      bullets: [
+        "사용자 회원가입 및 로그인 기능 (JWT 기반 인증, 쿠키 세션 관리)",
+        "달리기 기록 등록/수정/삭제 기능",
+        "러닝화(신발) 등록/수정/삭제 기능",
+        "신발별 누적 마일리지 자동 계산 기능",
+        "주간·월간 달리기 통계 조회 기능",
+        "날씨 위젯 표시 기능",
+        "무한 스크롤 기반 달리기 기록 리스트 조회 기능",
+        "달리기 기록 상세 페이지 및 평균 페이스 계산 기능",
+        "다크모드/라이트모드 테마 전환 기능",
+      ],
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "vanilla-extract",
+        "React Query",
+        "Zod",
+        "React-Hook-Form",
+        "NestJS",
+        "TypeORM",
+        "PostgreSQL",
+        "Railway",
+        "Vercel",
+      ],
+      link: "https://runjam.vercel.app",
+    },
+    {
       title: "채들 관리자 페이지",
       subtitle:
         "입주민 앱에서 들어온 하자·예약 데이터를 실시간으로 확인하고 피드백/처리 현황을 관리하는 통합 관리자페이지",

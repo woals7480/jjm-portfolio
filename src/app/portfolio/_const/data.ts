@@ -54,12 +54,18 @@ export const PORTFOLIO_DATA: PortfolioData = {
       color: "#a855f7",
       skills: ["Emotion", "Vuetify", "vanilla-extract"],
     },
-    //   {
-    //     key: "backend",
-    //     label: "Runtime / Backend",
-    //     color: "#f59e0b",
-    //     skills: ["Node.js"],
-    //   },
+    {
+      key: "backend",
+      label: "Runtime / Backend",
+      color: "#f59e0b",
+      skills: ["Node.js", "NestJS"],
+    },
+    {
+      key: "db",
+      label: "Database / ORM",
+      color: "#10b981",
+      skills: ["PostgreSQL", "TypeORM"],
+    },
     {
       key: "api",
       label: "API",
@@ -68,6 +74,26 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
   ],
   projects: [
+    {
+      id: "RunJam",
+      title: "RunJam",
+      cover: "/runjam.png",
+      period: { start: "2025/09" },
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "vanilla-extract",
+        "React Query",
+        "Zod",
+        "React-Hook-Form",
+        "NestJS",
+        "TypeORM",
+        "PostgreSQL",
+        "Railway",
+        "Vercel",
+      ],
+      badges: ["개인 프로젝트"],
+    },
     {
       id: "chaedle-admin",
       title: "채들 어드민",
@@ -132,6 +158,40 @@ export const PORTFOLIO_DATA: PortfolioData = {
 };
 
 export const PROJECTS_DATA: ProjectDetailProps[] = [
+  {
+    id: "RunJam",
+    title: "RunJam (러닝 기록 & 신발 마일리지)",
+    period: { start: "2025.09", end: "진행중" },
+    images: [{ src: "/runjam.png", alt: "RunJam 홈화면" }],
+    callout:
+      "달리기 기록과 신발 마일리지를 함께 관리하고, 주간/월간 통계를 시각화하여 러너의 활동을 한눈에 볼 수 있는 개인 러닝 트래커 페이지입니다.",
+    links: [{ label: "Link", href: "https://runjam.vercel.app" }],
+    stacks: [
+      "Next.js",
+      "TypeScript",
+      "React Query",
+      "React-Hook-Form",
+      "Zod",
+      "vanilla-extract",
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "Railway",
+      "Vercel",
+    ],
+    features: [
+      "- 회원가입/로그인: JWT(Access·Refresh) 기반 인증 및 쿠키 세션 관리",
+      "- 달리기 기록: 등록·수정·삭제 및 평균 페이스 자동 계산",
+      "- 신발 관리: 신발 등록·수정·삭제, 달리기 기록 연동으로 누적 마일리지 자동 계산",
+      "- 통계 페이지: 주간·월간 달리기 거리/시간 요약 및 시각화",
+      "- 날씨 위젯: Open-Meteo API 기반 실시간 날씨·기온 표시",
+      "- 리스트: React Query + IntersectionObserver로 무한 스크롤 구현",
+      "- UI 테마: vanilla-extract 토큰 기반 라이트/다크 모드 전환",
+      "- 인증 미들웨어: Next.js /api 프록시 + 자동 토큰 재발급",
+      "- 배포: Railway(NestJS/DB) + Vercel(Next.js)",
+    ],
+    type: "personal",
+  },
   {
     id: "chaedle-admin",
     title: "채들 관리자페이지",
