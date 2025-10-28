@@ -77,7 +77,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: "RunJam",
       title: "RunJam",
-      cover: "/runjam.png",
+      cover: "/runjam.PNG",
       period: { start: "2025/09" },
       tags: [
         "Next.js",
@@ -162,7 +162,7 @@ export const PROJECTS_DATA: ProjectDetailProps[] = [
     id: "RunJam",
     title: "RunJam (러닝 기록 & 신발 마일리지)",
     period: { start: "2025.09", end: "진행중" },
-    images: [{ src: "/runjam.png", alt: "RunJam 홈화면" }],
+    images: [{ src: "/runjam.PNG", alt: "RunJam 홈화면" }],
     callout:
       "달리기 기록과 신발 마일리지를 함께 관리하고, 주간/월간 통계를 시각화하여 러너의 활동을 한눈에 볼 수 있는 개인 러닝 트래커 페이지입니다.",
     links: [{ label: "Link", href: "https://runjam.vercel.app" }],
